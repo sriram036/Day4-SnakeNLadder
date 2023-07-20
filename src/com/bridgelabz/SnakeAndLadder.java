@@ -7,9 +7,11 @@ public class SnakeAndLadder {
     static final int FINALPOSITION = 100;
     public static void main(String[] args) {
         int playerPosition = 0;
+        int dieRollCount = 0;
         System.out.println("The player start position is " + STARTPOSITION);
         while (playerPosition < FINALPOSITION) {
             int dieValue = (int)(Math.random()*6-1+1)+1;
+            dieRollCount++;
             System.out.println("The die value is " + dieValue);
             playerPosition += dieValue;
             if (playerPosition > FINALPOSITION) {
@@ -37,6 +39,7 @@ public class SnakeAndLadder {
             System.out.println("The player position is " + playerPosition);
         }
         System.out.println("The player wins.");
+        System.out.println("The Total number of time the die rolled is " + dieRollCount);
         System.out.println("The player final position is " + playerPosition);
     }
 }
